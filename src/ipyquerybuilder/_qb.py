@@ -78,14 +78,14 @@ class QueryBuilder(ipyreact.ReactWidget):
 
     _fields = traitlets.List(traitlets.Dict()).tag(sync=True)
     _query = traitlets.Dict().tag(sync=True)
-    show_not_toggle = traitlets.Bool(False).tag(sync=True)
+    show_not_toggle = traitlets.Bool().tag(sync=True)
 
     def __init__(
         self,
         fields: Iterable[Field],
         *,
         query: dict[str, Any] = None,
-        show_not_toggle: bool = True,
+        show_not_toggle: bool = False,
     ):
         super().__init__()
         self.fields = fields
