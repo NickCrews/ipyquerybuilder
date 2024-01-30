@@ -1,0 +1,30 @@
+[project]
+name = "ipyquerybuilder"
+version = "0.1.0"
+description = "An ipywidget wrapper for the JS lib react-quierybuilder"
+authors = [
+    {name = "Nick Crews", email = "nicholas.b.crews@gmail.com"},
+]
+dependencies = [
+    "ipyreact",
+    "traitlets",
+    "watchfiles",
+]
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ipykernel",
+    "pytest",
+    "ruff",
+]
+
+
+[tool.pdm]
+distribution = true
